@@ -1,3 +1,5 @@
+from common import is_sorted, print_list
+
 def merge_sort(aList):
     if len(aList) <= 1:
         return aList
@@ -32,14 +34,6 @@ def merge(left, right):
 
     return sorted_list
 
-
-def is_sorted(ls):
-    for i in range(0, len(ls)-1):
-        if ls[i] > ls[i+1]:
-            print("Not sorted!")
-            return False
-    print("Sorted!")
-    return True
 
 n = 100000
 a = []

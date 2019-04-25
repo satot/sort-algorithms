@@ -1,3 +1,5 @@
+from common import is_sorted, print_list
+
 def bubble_sort(ls):
     n = len(ls)
     i = 0
@@ -10,17 +12,6 @@ def bubble_sort(ls):
         #print_list(ls, "Sorted " + str(i+1) + " time: ")
     return ls
 
-def print_list(ls, prefix=""):
-    print(prefix + "[" + ",".join([str(n) for n in ls]) + "]")
-    return
-
-def is_sorted(ls):
-    for i in range(0, len(ls)-1):
-        if ls[i] > ls[i+1]:
-            print("Not sorted!")
-            return False
-    print("Sorted!")
-    return True
 
 #a = [4,3,1,5,2]
 n = 10000
