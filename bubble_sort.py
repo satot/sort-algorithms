@@ -6,9 +6,7 @@ def bubble_sort(ls):
     for i in range(n-1):
         for j in range(n-1-i):
             if ls[j] > ls[j+1]:
-                tmp = ls[j]
-                ls[j] = ls[j+1]
-                ls[j+1] = tmp
+                ls[j], ls[j+1] = ls[j+1], ls[j]
         #print_list(ls, "Sorted " + str(i+1) + " time: ")
     return ls
 
