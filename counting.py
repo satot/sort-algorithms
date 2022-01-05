@@ -23,8 +23,9 @@ def counting_sort(array, k):
     # number of 0 in array: 2 => result_array[-1, 0, -1, -1, -1]
     # next 0 would be populated before this index, hence this sort would be stable
     for i in range(len(array), 0, -1):
-        result_array[counting_array[array[i-1]]-1] = array[i-1]
-        counting_array[array[i-1]] -= 1
+        cur = array[i-1]
+        result_array[counting_array[cur]-1] = cur
+        counting_array[cur] -= 1
         print(counting_array, result_array)
     
     return result_array
